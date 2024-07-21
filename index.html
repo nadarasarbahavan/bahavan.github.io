@@ -16,6 +16,17 @@
         .publication-item .details {
             max-width: 600px;
         }
+        .contact-form {
+            max-width: 600px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+        .contact-form button {
+            padding: 10px 15px;
+        }
     </style>
 </head>
 <body>
@@ -36,6 +47,11 @@
         <section id="about">
             <h2>About Me</h2>
             <p>I'm a PhD student researching machine learning. This blog is a place to share my findings and insights.</p>
+            <p>Connect with me:</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/nadarasarbahavan" target="_blank">LinkedIn</a></li>
+                <li><a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" target="_blank">Google Scholar</a></li>
+            </ul>
         </section>
         
         <section id="cv">
@@ -46,7 +62,7 @@
         <section id="publications">
             <h2>Publications</h2>
             <div class="publication-item">
-                <img src="paper1-thumbnail.jpg" alt="Paper 1 Thumbnail">
+                <img src="papers/pap1.jpg" alt="Paper 1 Thumbnail">
                 <div class="details">
                     <h3><a href="https://arxiv.org/abs/1234.56789">Paper Title 1</a></h3>
                     <p><strong>Authors:</strong> Author A, Author B, Author C</p>
@@ -55,7 +71,7 @@
                 </div>
             </div>
             
-            
+            <!-- Add more publications here -->
         </section>
         
         <section id="blog">
@@ -69,7 +85,18 @@
         
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: DO NOT CONTACT</p>
+            <form class="contact-form" action="send-message.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
         </section>
         
         <footer>
@@ -78,4 +105,3 @@
     </div>
 </body>
 </html>
-
