@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,6 +10,57 @@
     <style>
         body {
             line-height: 1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            position: relative;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            background: url('Papers/images.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+
+        header h1 {
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        header .top-left,
+        header .top-right {
+            position: absolute;
+            top: 10px;
+            width: 100px; /* Adjust as needed */
+            height: auto;
+            z-index: 1;
+        }
+
+        header .top-left {
+            left: 10px;
+        }
+
+        header .top-right {
+            right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
         }
 
         section {
@@ -45,13 +97,21 @@
             padding: 10px 15px;
         }
 
-    </style> 
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
- <div class="container"> 
-        <header> 
+    <div class="container">
+        <header>
             <h1>Nadarasar Bahavan's Blog</h1>
+            <img src="Papers/pap1.jpg" alt="Left Image" class="top-left">
+            <img src="Papers/pap1.jpg" alt="Right Image" class="top-right">
             <nav>
                 <ul>
                     <li><a href="#about">About Me</a></li>
@@ -62,33 +122,25 @@
                 </ul>
             </nav>
         </header>
-        
+
         <section id="about">
             <h2>About Me</h2>
-<!--             <p> </p>
-            <p> Ph.D. candidate researching Machine Learning at the University of Melbourne under Prof. Saman Halgamuge.</p> -->
             <ul>
-                <li> Ph.D. candidate researching Machine Learning at the University of Melbourne under <a href="https://findanexpert.unimelb.edu.au/profile/2854-saman-halgamuge" target="_blank">Prof. Saman Halgamuge</a>. </li>
-                <li> Teaching Assistant at the University of Melbourne </li>
-                <li> Interested in Self Supervised Learning, Diffusion Models, Safe AI and Geometric Deep Learning </li>
-                <li> Former Student at University of Moratuwa, Biomedical Engineering (Gold Medal for Biomedical Engineering, Convocation Award for the Most Outstanding Graduand of the Faculty of
-Engineering) </li>
+                <li>Ph.D. candidate researching Machine Learning at the University of Melbourne under <a href="https://findanexpert.unimelb.edu.au/profile/2854-saman-halgamuge" target="_blank">Prof. Saman Halgamuge</a>.</li>
+                <li>Teaching Assistant at the University of Melbourne</li>
+                <li>Interested in Self Supervised Learning, Diffusion Models, Safe AI, and Geometric Deep Learning</li>
+                <li>Former Student at University of Moratuwa, Biomedical Engineering (Gold Medal for Biomedical Engineering, Convocation Award for the Most Outstanding Graduand of the Faculty of Engineering)</li>
             </ul>
         </section>
-        
-<!--         <section id="cv">
-            <h2>CV</h2>
-            <p><a href="cv.pdf">Download my CV</a></p>
-        </section> -->
-        
+
         <section id="publications">
             <h2>Selected Publications</h2>
             <table class="publication-item">
-                <tr onmouseout="itaml_animation_stop()" onmouseover="itaml_animation_start()">
+                <tr>
                     <td class="image-container">
                         <div class="one">
-                            <div class="two" id='itaml_image'>
-                                <img src='Papers/pap1.jpg' alt="Paper 1 Thumbnail">
+                            <div class="two" id="itaml_image">
+                                <img src="Papers/pap1.jpg" alt="Paper 1 Thumbnail">
                             </div>
                         </div>
                     </td>
@@ -97,34 +149,4 @@ Engineering) </li>
                             <p><strong>Towards an objective measurement of presence, place illusion, and plausibility illusion in virtual reality using electroencephalography</strong></p>
                         </a>
                         <p><strong>Journal:</strong> Virtual Reality</p>
-                        <p><strong>Year:</strong> 2023</p>
-                        <p><strong>Publisher:</strong> Springer London</p>
-                    </td>
-                </tr>
-                <!-- Add more publication rows here -->
-            </table>
-        </section>
-        
-        <section id="blog">
-            <h2>Blog Posts</h2>
-            <ul>
-                <li><a href="post1.html">Post 1: Thinking about a good blog post, lol, so many ideas. </a></li>
-            </ul>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>You can reach out to me through LinkedIn for any queries or collaborations.</p>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/nadarasarbahavan" target="_blank">LinkedIn</a></li>
-                <li><a href="https://scholar.google.com/citations?user=AW1LjIkAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-            </ul>
-        </section>
-        
-        <footer>
-            <p>&copy; 2024 Nadarasar Bahavan. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
-
-</html>
+                        <p><strong>Y
