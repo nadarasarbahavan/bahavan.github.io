@@ -1,178 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nadarasar Bahavan's Blog</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+    <title>My Blog Post</title>
     <style>
         body {
-            line-height: 1;
-        }
-
-        header {
-            padding: 10px 0;
-            text-align: center;
-            position: relative;
-            color: white;
-        }
-
-        header h1 {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        header::before {
-            content: "";
-            background: url('Papers/images.jpeg') no-repeat center center;
-            background-size: cover;
-            opacity: 0.7; /* Adjust the transparency */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        nav ul {
-            list-style: none;
             padding: 0;
-            position: relative;
-            z-index: 1;
+            background-color: #f4f4f4;
         }
-
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: 80%;
             margin: auto;
-            padding: 20px;
+            overflow: hidden;
         }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        .publication-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .publication-item img {
-            max-width: 150px;
-            margin-right: 20px;
-        }
-
-        .publication-item .details {
-            max-width: 600px;
-        }
-
-        .contact-form {
-            max-width: 600px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 8px;
-        }
-
-        .contact-form button {
-            padding: 10px 15px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
+        header {
+            background: #50b3a2;
             color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .showcase {
+            min-height: 400px;
+            background: url('showcase.jpg') no-repeat 0 -400px;
+            text-align: center;
+            color: #fff;
+        }
+        .showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>Nadarasar Bahavan's Blog</h1>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>My Blog</h1>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#cv">CV</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a Ph.D. candidate researching machine learning at the University of Melbourne under Prof. Saman Halgamuge.</p>
-            <p>Connect with me:</p>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/nadarasarbahavan" target="_blank">LinkedIn</a></li>
-                <li><a href="https://scholar.google.com/citations?user=AW1LjIkAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-            </ul>
-        </section>
+    <section class="showcase">
+        <div class="container">
+            <h1>Welcome to My Blog</h1>
+            <p>Sharing my thoughts and experiences</p>
+        </div>
+    </section>
 
-        <section id="cv">
-            <h2>CV</h2>
-            <p><a href="cv.pdf">Download my CV</a></p>
-        </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-            <table class="publication-item">
-                <tr onmouseout="itaml_animation_stop()" onmouseover="itaml_animation_start()">
-                    <td class="image-container">
-                        <div class="one">
-                            <div class="two" id='itaml_image'>
-                                <img src='Papers/pap1.jpg' alt="Paper 1 Thumbnail">
-                            </div>
-                        </div>
-                    </td>
-                    <td class="details">
-                        <a href="https://link.springer.com/article/10.1007/s10055-023-00815-x">
-                            <p><strong>Towards an objective measurement of presence, place illusion, and plausibility illusion in virtual reality using electroencephalography</strong></p>
-                        </a>
-                        <p><strong>Journal:</strong> Virtual Reality</p>
-                        <p><strong>Year:</strong> 2023</p>
-                        <p><strong>Publisher:</strong> Springer London</p>
-                        <p>
-                            <a href="https://link.springer.com/article/10.1007/s10055-023-00815-x">paper</a>
-                        </p>
-                    </td>
-                </tr>
-                <!-- Add more publication rows here -->
-            </table>
-        </section>
-
-        <section id="blog">
-            <h2>Blog Posts</h2>
-            <ul>
-                <li><a href="post1.html">Post 1: Introduction to Self-Organizing Maps</a></li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Me via LinkedIn</h2>
-            <p>You can reach out to me through LinkedIn for any queries or collaborations.</p>
-        </section>
-
-        <footer>
-            <p>&copy; 2024 Nadarasar Bahavan. All rights reserved.</p>
-        </footer>
+    <div class="container">
+        <div class="content">
+            <h2>My First Blog Post</h2>
+            <p>Posted on July 21, 2024</p>
+            <img src="image1.jpg" alt="An interesting image">
+            <p>This is the content of my first blog post. Here, I am sharing my thoughts on various topics that interest me.</p>
+            <img src="image2.jpg" alt="Another interesting image">
+            <p>I hope you enjoy reading my blog. Stay tuned for more updates!</p>
+        </div>
     </div>
 </body>
-
 </html>
