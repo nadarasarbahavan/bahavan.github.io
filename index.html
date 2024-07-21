@@ -3,6 +3,20 @@
 <head>
     <title>Nadarasarbahavan's PhD Blog</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .publication-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .publication-item img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+        .publication-item .details {
+            max-width: 600px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -31,35 +45,28 @@
         
         <section id="publications">
             <h2>Publications</h2>
-            <ul>
-                <li>
-                    <a href="https://arxiv.org/abs/1234.56789">Paper Title 1</a>
-                    <p>Description of Paper 1.</p>
-                </li>
-                <li>
-                    <a href="https://arxiv.org/abs/9876.54321">Paper Title 2</a>
-                    <p>Description of Paper 2.</p>
-                </li>
-            </ul>
-        </section>
-        
-        <section id="blog">
-            <h2>Blog Posts</h2>
-            <ul>
-                <li><a href="post1.html">Post 1: Introduction to Self-Organizing Maps</a></li>
-                <li><a href="post2.html">Post 2: Visualizing Data with t-SNE</a></li>
-                <li><a href="post3.html">Post 3: Feature Augmentation Techniques</a></li>
-            </ul>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: nadarasarbahavan@example.com</p>
-        </section>
-        
-        <footer>
-            <p>&copy; 2024 Nadarasarbahavan. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
-</html>
+            <div class="publication-item">
+                <img src="paper1-thumbnail.jpg" alt="Paper 1 Thumbnail">
+                <div class="details">
+                    <h3><a href="https://arxiv.org/abs/1234.56789">Paper Title 1</a></h3>
+                    <p><strong>Authors:</strong> Author A, Author B, Author C</p>
+                    <p><strong>Year:</strong> 2024</p>
+                    <p><strong>Abstract:</strong> Brief description of Paper 1. This paper explores...</p>
+                    <p><strong>BibTeX:</strong></p>
+                    <pre>
+@article{author2024paper1,
+    title={Paper Title 1},
+    author={Author A and Author B and Author C},
+    journal={Journal Name},
+    volume={x},
+    number={y},
+    pages={1--10},
+    year={2024},
+    url={https://arxiv.org/abs/1234.56789}
+}
+                    </pre>
+                </div>
+            </div>
+            
+            <div class="publication-item">
+  
